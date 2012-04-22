@@ -18,5 +18,6 @@ namespace :db do
                    password_confirmation: password)
       print "."
     end
+    puts ""
   end
 end
