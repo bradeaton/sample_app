@@ -2,6 +2,7 @@
 	 <%= gravatar_for user, size: 52 %>
 	 <%= link_to user.name, user %>
 	 <% if current_user.admin? && !current_user?(user) %>
-		| <%= link_to "delete", user, method: :delete, confirm: "Delete the user #{user.name}... Are you sure?" %>
+		<% # This next line displays a bootstrap modal conformation dilog... see users.js.coffee for details. %>
+		| <%= link_to "delete", user, method: :delete, confirm: "Delete User", dialog_message: "Delete the user <b>#{user.name}</b>... are you sure?" %>
 	<% end %>
 </li>
